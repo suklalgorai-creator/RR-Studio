@@ -1,0 +1,32 @@
+/* ==============================
+   SERVICES PAGE STYLES
+   ============================== */
+
+.service-detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .service-detail-container {
+        grid-template-columns: 1fr !important; /* Stack vertically */
+        gap: 30px !important;
+        padding: 40px 20px !important;
+    }
+    
+    /* Ensure image appears first on mobile */
+    .service-detail-container .service-detail-image {
+        order: -1;
+    }
+    
+    /* Responsive overrides for inline styles */
+    .service-detail-content h2 {
+        font-size: 32px !important;
+    }
+}

@@ -1,0 +1,342 @@
+/* ==============================
+   RESPONSIVE — All breakpoints
+   ============================== */
+
+/* ── Tablet (≤1100px) ── */
+@media (max-width: 1100px) {
+    .about, .appointment { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    .instagram-grid { grid-template-columns: repeat(3, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-layout { grid-template-columns: 1fr; max-width: 820px; }
+    .map-frame iframe { min-height: 410px; }
+    .social-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .about { gap: 56px; }
+    .about-left img { border-radius: 22px; max-height: 620px; }
+    .gallery-grid { gap: 18px; }
+    .gallery-item { border-radius: 16px; min-height: 220px; }
+    .appointment { gap: 46px; }
+    .appointment-right { padding: 32px; border-radius: 18px; }
+    .appointment-right form { gap: 14px; }
+    .cta { margin: 56px 7%; padding: 64px 40px; border-radius: 28px; }
+    .footer { padding: 70px 7% 26px; }
+}
+
+/* ── iPad/Tablet Header Horizontal Scroll (769px - 1100px) ── */
+@media (min-width: 769px) and (max-width: 1100px) {
+    .navbar {
+        gap: 15px;
+    }
+    .nav-menu {
+        flex: 1;
+        min-width: 0; /* Allows the flex item to shrink and trigger scroll */
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        margin: 0 15px;
+        padding-bottom: 6px; /* space for the hover underline */
+        gap: 25px; /* slightly reduce gap on tablet */
+    }
+    .nav-menu::-webkit-scrollbar {
+        display: none;
+    }
+    .nav-menu a {
+        white-space: nowrap;
+    }
+    .logo, .nav-actions {
+        flex-shrink: 0;
+    }
+    .book-btn {
+        padding: 12px 18px;
+        font-size: 11px;
+    }
+}
+
+/* ── Services 2-col (≤900px) ── */
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 820px;
+    }
+    .navbar { height: 78px; padding: 0 22px; }
+    .logo-main { font-size: 28px; }
+    .logo-sub { font-size: 9px; }
+    .nav-menu { top: 78px; }
+}
+
+/* ── Mobile (≤768px) ── */
+@media (max-width: 768px) {
+    /* Header sizing adjustments */
+    .navbar { height: 68px; }
+    .logo-main { font-size: 22px; letter-spacing: 1.5px; }
+    .logo-sub { font-size: 7.5px; letter-spacing: 2px; }
+    
+    .theme-toggle { width: 34px; height: 34px; }
+    .theme-toggle-icon { font-size: 16px; }
+    
+    .menu-btn { width: 38px; height: 38px; font-size: 26px; }
+    .nav-actions { margin-left: auto; margin-right: 12px; }
+
+    .mobile-theme-toggle {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+    }
+
+    /* Reduce vertical padding between sections on mobile */
+    section { padding: 50px 22px; }
+    
+    /* Show Book button in mobile header */
+    .book-btn { 
+        display: inline-flex; 
+        align-items: center;
+        justify-content: center;
+        padding: 8px 16px; 
+        font-size: 0; /* Hides original 'Book Appointment' text */
+        white-space: nowrap;
+        margin-right: 8px;
+    }
+    .book-btn::before {
+        content: 'Book Now';
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: inherit;
+    }
+    
+    /* Make About Us image smaller on mobile */
+    .about-left img {
+        max-height: 320px;
+        aspect-ratio: 4/3;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 90px; left: 0;
+        width: 100%;
+        padding: 25px 20px;
+        background: rgba(21,21,21,.96);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        transform: translateY(-140%);
+        opacity: 0;
+        pointer-events: none;
+        transition: .35s ease;
+    }
+    .nav-menu.active { transform: translateY(0); opacity: 1; pointer-events: auto; }
+    .menu-btn { display: flex; }
+
+    .hero { min-height: 92vh; padding-top: 78px; }
+    .hero h1 { font-size: clamp(42px, 13vw, 58px); }
+    .hero p { max-width: 34rem; margin-left: auto; margin-right: auto; }
+
+    .section-title h2 { font-size: 36px; }
+    .about-right h2, .appointment-left h2, .cta h2 { font-size: 38px; }
+
+    /* Horizontal Snap Scroll for Mobile Cards */
+    .services-grid, .gallery-grid, .package-grid, .why-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        padding-bottom: 20px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch;
+        
+        /* Make scroll edge-to-edge and prevent page overflow */
+        width: 100vw;
+        max-width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+    .services-grid::-webkit-scrollbar, .gallery-grid::-webkit-scrollbar, .package-grid::-webkit-scrollbar, .why-grid::-webkit-scrollbar {
+        display: none;
+    }
+    .service-card, .gallery-item, .package-card, .why-card {
+        flex: 0 0 85%;
+        scroll-snap-align: center;
+    }
+    .gallery-item.large { grid-row: auto; }
+    .instagram-grid { grid-template-columns: repeat(2, 1fr); }
+    
+    .footer { padding: 50px 0 20px; overflow-x: hidden; }
+    .footer-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 15px;
+        padding-bottom: 20px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch;
+        
+        width: 100vw;
+        max-width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .footer-grid::-webkit-scrollbar { display: none; }
+    .footer-grid > div {
+        flex: 0 0 85%;
+        scroll-snap-align: center;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(214, 179, 106, 0.15);
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    /* Horizontal scroll for About Us sections */
+    .about-features { margin-bottom: 24px; }
+    .stats { margin-bottom: 24px; }
+    .stats, .about-features { 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 15px;
+        padding-bottom: 15px;
+        scrollbar-width: none;
+        
+        /* Make scroll edge-to-edge and prevent page overflow */
+        width: 100vw;
+        max-width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+    .stats::-webkit-scrollbar, .about-features::-webkit-scrollbar { display: none; }
+    .feature {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        scroll-snap-align: start;
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+    .stat-box {
+        flex: 0 0 160px;
+        scroll-snap-align: start;
+        padding: 18px 15px;
+    }
+    .stat-box h3 { font-size: 32px; margin-bottom: 5px; }
+    .stat-box p { font-size: 13px; white-space: normal; word-break: break-word; }
+    
+    .cta { margin: 60px 20px; padding: 60px 25px; }
+    .appointment-right { 
+        padding: 24px 20px; 
+        border-radius: 20px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+    .appointment-right form { gap: 12px; }
+    
+    .appointment-right input,
+    .appointment-right select,
+    .appointment-right textarea {
+        padding: 13px 16px;
+        font-size: 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.1);
+        background-color: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(10px);
+    }
+    
+    .appointment-right input:focus,
+    .appointment-right select:focus,
+    .appointment-right textarea:focus {
+        border-color: var(--gold);
+        background-color: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 0 0 3px rgba(214, 179, 106, 0.1);
+    }
+    
+    .appointment-right button {
+        margin-top: 6px;
+        padding: 15px;
+        font-size: 15px;
+        border-radius: 12px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        box-shadow: 0 8px 20px rgba(214, 179, 106, 0.25);
+    }
+    .package-card.featured { transform: none; }
+    .lightbox-nav { top: auto; bottom: 24px; }
+    
+    /* Service Card Mobile Adjustments to reduce vertical height */
+    .service-card { padding: 0; }
+    .service-image { height: 180px; }
+    .service-content { padding: 20px 16px; }
+    .service-card h3 { font-size: 20px; margin-bottom: 8px; padding-bottom: 8px; }
+    .service-card p { font-size: 13px; margin-bottom: 12px; line-height: 1.5; }
+    .service-price { margin-bottom: 12px; font-size: 14px; }
+    
+    .package-card, .why-card { padding: 28px 20px; }
+    
+    /* Reduce vertical space in testimonial cards */
+    .testimonial-card { padding: 20px 20px 18px; }
+    .review-source { margin-bottom: 12px; padding: 6px 12px; font-size: 12px; }
+    .testimonial-card p { font-size: 14px; margin-bottom: 12px; line-height: 1.6; }
+    .stars { margin-bottom: 8px; font-size: 16px; }
+    .quote { font-size: 32px; margin-bottom: 5px; }
+    
+    /* Hide testimonial slider arrows on mobile */
+    .testimonial-controls { display: none; }
+    
+    .social-section { margin-top: 42px; }
+    .social-section-heading, .copyright { display: block; }
+    .social-section-heading h3 { margin-top: 8px; }
+    .social-grid { grid-template-columns: 1fr; }
+    .footer-legal { justify-content: flex-start; margin-top: 12px; }
+    .floating-call { right: 16px; bottom: 136px; width: 48px; height: 48px; font-size: 17px; }
+    .floating-whatsapp { right: 16px; bottom: 78px; width: 48px; height: 48px; }
+    .back-to-top { right: 16px; bottom: 20px; width: 48px; height: 48px; }
+    .contact-card { padding: 25px 18px; }
+    .contact-list { grid-template-columns: 1fr; }
+    .map-frame iframe { min-height: 340px; }
+}
+
+/* ── Services 1-col (≤600px) ── */
+@media (max-width: 600px) {
+    .service-card { min-height: 0; }
+}
+
+/* ── Small mobile (≤480px) ── */
+@media (max-width: 480px) {
+    section { padding: 58px 18px; }
+    .section-title { margin-bottom: 34px; }
+    .logo-sub { max-width: 180px; line-height: 1.4; }
+    .hero h1 { font-size: 42px; }
+    .hero p { font-size: 16px; }
+    .primary-btn, .secondary-btn { width: 100%; }
+    .hero-buttons, .cta-buttons { flex-direction: column; }
+    .instagram-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .package-card, .service-card { padding: 34px 22px; }
+    .hero-tag {
+        font-size: 11px;
+        padding: 10px 20px;
+        letter-spacing: 2px;
+    }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+    /* Keep slider fade working even with reduced motion */
+    .hero-slide {
+        transition-duration: 1s !important;
+    }
+}

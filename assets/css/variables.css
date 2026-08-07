@@ -1,0 +1,19 @@
+/* ==============================
+   VARIABLES — Design Tokens
+   ============================== */
+:root {
+    --primary: #c9a66b;
+    --primary-dark: #b59258;
+    --gold: #d6b36a;
+    --white: #ffffff;
+    --black: #1a1a1a;
+    --gray: #888888;
+    --light: #f9f8f6;
+    --accent: #d8a0a6;
+    --shadow: 0 20px 60px rgba(0,0,0,.08);
+    --radius: 20px;
+    --transition: .4s ease;
+    --container: 1180px;
+    --glass: rgba(255,255,255,.16);
+    --focus: 0 0 0 4px rgba(214,179,106,.28);
+}

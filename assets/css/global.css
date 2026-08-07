@@ -1,0 +1,192 @@
+/* ==============================
+   GLOBAL — Reset, Base, Shared Utilities
+   All section modules are imported here.
+   ============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import 'variables.css?v=11';
+@import 'navbar.css?v=11';
+@import 'hero.css?v=12';
+@import 'services.css?v=11';
+@import 'about.css?v=11';
+@import 'gallery.css?v=11';
+@import 'packages.css?v=11';
+@import 'why-us.css?v=11';
+@import 'testimonials.css?v=11';
+@import 'appointment.css?v=11';
+@import 'contact.css?v=11';
+@import 'footer.css?v=11';
+@import 'dark-theme.css?v=11';
+@import 'preloader.css';
+@import 'responsive.css?v=11';
+
+/* ── Reset ── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #fcfaf8;
+    color: #222;
+    overflow-x: hidden;
+}
+body.loaded { opacity: 1; }
+
+img { width: 100%; display: block; }
+a { text-decoration: none; }
+ul { list-style: none; }
+section { padding: 75px 6%; }
+
+button, input, select, textarea { font: inherit; }
+button { border: 0; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: none;
+    box-shadow: var(--focus);
+}
+
+/* ── Section title ── */
+.section-title {
+    text-align: center;
+    max-width: 700px;
+    margin: auto auto 50px;
+}
+.section-title span {
+    color: var(--primary);
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin: 10px 0;
+}
+.section-title p { color: var(--gray); line-height: 1.7; font-size: 15px; }
+
+/* ── Buttons ── */
+.primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 42px;
+    background: var(--primary);
+    color: white;
+    border-radius: 60px;
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 13px;
+    box-shadow: 0 12px 25px rgba(201,166,107,.35), inset 0 2px 0 rgba(255,255,255,0.2);
+    position: relative;
+    overflow: hidden;
+}
+.primary-btn:hover { 
+    transform: translateY(-4px) scale(1.02); 
+    box-shadow: 0 18px 32px rgba(201,166,107,.5), inset 0 2px 0 rgba(255,255,255,0.2);
+    background: var(--primary-dark); 
+}
+
+.secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 38px;
+    border: 2px solid white;
+    color: white;
+    border-radius: 60px;
+    transition: var(--transition);
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+.secondary-btn:hover { background: white; color: #111; }
+
+/* ── Ripple effect ── */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    background: rgba(255,255,255,.55);
+    animation: ripple .65s linear;
+    pointer-events: none;
+}
+
+/* ── Scroll reveal ── */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ── Preloader ── */
+.preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: grid;
+    place-items: center;
+    background: var(--light);
+    transition: opacity .45s ease, visibility .45s ease;
+}
+.preloader-mark {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary);
+    font-size: clamp(18px, 4vw, 42px);
+    letter-spacing: 4px;
+    text-align: center;
+    padding: 0 20px;
+    animation: preloaderPulse 1.15s ease-in-out infinite alternate;
+}
+.preloader.hide { opacity: 0; visibility: hidden; pointer-events: none; }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f4f4f4; }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 20px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
+
+/* ── Missing image ── */
+img.is-missing { opacity: 0; }
+
+/* ── Performance hints ── */
+.service-card, .package-card, .why-card,
+.testimonial-card, .stat-box, .appointment-right {
+    will-change: transform;
+}
+
+/* ── Global keyframes ── */
+@keyframes preloaderPulse {
+    from { opacity: .45; transform: scale(.98); }
+    to   { opacity: 1;   transform: scale(1);  }
+}
+@keyframes heroFade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes sectionRise {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: none; }
+}
+@keyframes ripple {
+    to { transform: scale(4); opacity: 0; }
+}
+@keyframes rotateDash {
+    0%   { transform: rotate(0deg);   }
+    100% { transform: rotate(360deg); }
+}
+@keyframes zoomOutEntry {
+    0% { opacity: 0; transform: scale(1.15); filter: blur(4px); }
+    100% { opacity: 1; transform: scale(1); filter: blur(0); }
+}

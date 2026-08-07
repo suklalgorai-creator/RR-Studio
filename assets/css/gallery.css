@@ -1,0 +1,112 @@
+/* ==============================
+   GALLERY & LIGHTBOX
+   ============================== */
+.gallery { background: #ffffff; }
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 22px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    min-height: 260px;
+    background: linear-gradient(135deg, #fff5f7, #f7efe1);
+}
+.gallery-item.large { grid-row: span 2; }
+
+.gallery-item img,
+.gallery-item video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/5;
+    transition: .6s;
+    background: linear-gradient(135deg, #fff5f7, #f7efe1);
+}
+.gallery-item video {
+    display: block;
+    min-height: 260px;
+    background: #151515;
+}
+
+.gallery-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.25);
+    opacity: 0;
+    transition: .4s;
+    z-index: 1;
+}
+.gallery-item::after {
+    content: "+";
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 50px;
+    opacity: 0;
+    transition: .4s;
+    z-index: 2;
+}
+.gallery-video::after {
+    content: "Play";
+    font-size: 18px;
+    padding: 12px 20px;
+    border: 1px solid rgba(255,255,255,.45);
+    border-radius: 999px;
+    background: rgba(0,0,0,.28);
+    backdrop-filter: blur(10px);
+}
+
+.gallery-item:hover img,
+.gallery-item:hover video { transform: scale(1.12); }
+.gallery-item:hover::before,
+.gallery-item:hover::after { opacity: 1; }
+
+.gallery-btn { text-align: center; margin-top: 50px; }
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1600;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: rgba(0,0,0,.84);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+}
+.lightbox.open { opacity: 1; visibility: visible; }
+
+.lightbox img {
+    width: min(92vw, 980px);
+    max-height: 84vh;
+    object-fit: contain;
+    border-radius: 18px;
+    box-shadow: 0 30px 90px rgba(0,0,0,.35);
+}
+
+.lightbox-close,
+.lightbox-nav {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.14);
+    color: white;
+    font-size: 30px;
+    backdrop-filter: blur(14px);
+    cursor: pointer;
+}
+.lightbox-close { top: 24px; right: 24px; }
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }

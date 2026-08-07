@@ -1,0 +1,99 @@
+/* ==============================
+   TESTIMONIALS
+   ============================== */
+.testimonials { background: #fcfaf8; }
+
+.testimonial-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.testimonial-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px 40px;
+    box-shadow: var(--shadow);
+    transition: .4s;
+    position: relative;
+    flex: 0 0 calc(33.333% - 20px);
+    border: 1px solid rgba(183,110,121,0.08);
+}
+
+@media (max-width: 1024px) {
+    .testimonial-card { flex: 0 0 calc(50% - 15px); }
+}
+
+@media (max-width: 768px) {
+    .testimonial-card { flex: 0 0 100%; }
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0,0,0,.08);
+    border-color: rgba(183,110,121,0.2);
+}
+
+/* ── Google Review Badge ── */
+.review-source {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    background: #f8f9fa;
+    padding: 8px 16px;
+    border-radius: 30px;
+    width: fit-content;
+    border: 1px solid #eee;
+}
+
+.quote { font-size: 40px; color: var(--primary); line-height: 1; margin-bottom: 10px; font-family: 'Playfair Display', serif;}
+.testimonial-card p { color: var(--gray); line-height: 1.8; margin-bottom: 20px; font-size: 16px; font-style: italic; }
+.stars { color: #f6b400; font-size: 18px; margin-bottom: 15px; letter-spacing: 2px;}
+
+.testimonial-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 4px;
+    color: var(--light);
+}
+.testimonial-card span { color: #888; font-size: 13px;}
+
+.testimonial-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 10;
+    padding: 0 10px;
+}
+.testimonial-btn {
+    pointer-events: auto;
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: white;
+    color: var(--primary);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-size: 26px;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.testimonial-btn:hover { background: var(--primary); color: white; transform: translateY(-3px); }

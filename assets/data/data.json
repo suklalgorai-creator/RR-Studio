@@ -1,0 +1,610 @@
+{
+  "salon": {
+    "name": "RR Studio",
+    "logoMain": "RR Studio",
+    "logoSub": "Photography",
+    "tagline": "Premium Wedding Photography",
+    "description": "Premium wedding photography, cinematography, pre-wedding, kids, and fashion shoots in Jamshedpur & Ghatsila by RR Studio.",
+    "foundedYear": 2010,
+    "copyright": "Copyright 2026 RR Studio. All rights reserved.",
+    "designerCredit": "Designed and developed by codecraftdigital",
+    "contact": {
+      "phone": "+91 8797655726",
+      "whatsapp": "918797655726",
+      "email": "rajkumarbhunia2004@gmail.com",
+      "address": "Ghatsila, East Singhbhum, Jharkhand",
+      "hours": "Open daily, 9:00 AM - 8:00 PM"
+    },
+    "links": {
+      "googleMapsEmbed": "https://www.google.com/maps?q=RR+Studio,+Ghatsila,+Jharkhand&output=embed",
+      "googleMapsDirect": "https://maps.app.goo.gl/YEMPaHX6qhjrgi436",
+      "instagram": "https://www.instagram.com/rrstudio_rr6",
+      "facebook": "https://www.facebook.com/rrstudio.rr6/",
+      "youtube": "https://youtube.com/@rrstudiorr6"
+    }
+  },
+  "navigation": {
+    "main": [
+      {
+        "label": "Home",
+        "href": "index.html#home",
+        "isHome": true
+      },
+      {
+        "label": "Services",
+        "href": "pages/services.html"
+      },
+      {
+        "label": "Gallery",
+        "href": "pages/gallery.html"
+      },
+      {
+        "label": "Packages",
+        "href": "index.html#packages"
+      },
+      {
+        "label": "About",
+        "href": "pages/about.html"
+      },
+      {
+        "label": "Reviews",
+        "href": "index.html#testimonials"
+      },
+      {
+        "label": "Contact",
+        "href": "index.html#contact"
+      }
+    ],
+    "footerQuickLinks": [
+      {
+        "label": "Home",
+        "href": "index.html#home"
+      },
+      {
+        "label": "Services",
+        "href": "pages/services.html"
+      },
+      {
+        "label": "Gallery",
+        "href": "pages/gallery.html"
+      },
+      {
+        "label": "Packages",
+        "href": "index.html#packages"
+      },
+      {
+        "label": "About Us",
+        "href": "pages/about.html"
+      }
+    ],
+    "footerServices": [
+      {
+        "label": "Wedding Photography",
+        "href": "pages/services.html#wedding-photography"
+      },
+      {
+        "label": "Cinematography",
+        "href": "pages/services.html#cinematography"
+      },
+      {
+        "label": "Pre-Wedding Shoots",
+        "href": "pages/services.html#pre-wedding"
+      },
+      {
+        "label": "Drone Photography",
+        "href": "pages/services.html#drone-shoot"
+      }
+    ]
+  },
+  "hero": {
+    "home": {
+      "tag": "Capturing Emotions, Not Just Photos",
+      "title": "Timeless<br>Moments",
+      "subtitle": "Wedding Photography | Cinematography | Pre-Wedding",
+      "primaryBtn": {
+        "label": "Reserve Your Date",
+        "href": "#contact"
+      },
+      "secondaryBtn": {
+        "label": "View Gallery",
+        "href": "#gallery"
+      }
+    },
+    "services": {
+      "tag": "Discover Our Expertise",
+      "title": "Our Luxury Services",
+      "subtitle": "Explore our comprehensive range of premium photography services designed to make you look and feel your absolute best.",
+      "image": "assets/images/wedding-photo-10.webp"
+    },
+    "about": {
+      "tag": "Our Story",
+      "title": "About RR Studio",
+      "subtitle": "Dedicated to capturing your purest moments.",
+      "image": "assets/images/wedding-photo-2.webp"
+    },
+    "gallery": {
+      "tag": "Our Portfolio",
+      "title": "Complete Gallery",
+      "subtitle": "A collection of our finest memories and memorable moments.",
+      "image": "assets/images/wedding-photo-10.webp"
+    }
+  },
+  "services": [
+    {
+      "id": "wedding-photography",
+      "badge": "WEDDING",
+      "title": "Wedding Photography",
+      "shortSummary": "Candid & Traditional wedding photography.",
+      "fullDescription": "Your wedding day is one of the most important days of your life. Our expert photographers specialize in capturing raw emotions and authentic moments.",
+      "features": [
+        "Candid Photography",
+        "Traditional Photography",
+        "Portrait Shoots"
+      ],
+      "price": "Contact for Pricing",
+      "image": "assets/images/wedding-photo-10.webp"
+    },
+    {
+      "id": "cinematography",
+      "badge": "CINEMA",
+      "title": "Cinematic Videography",
+      "shortSummary": "High-end 4K wedding films crafted like a movie.",
+      "fullDescription": "We don't just record videos; we tell stories. Our cinematic wedding films capture the laughter, tears, and joy of your special day in stunning 4K quality.",
+      "features": [
+        "4K Wedding Films",
+        "Teasers & Highlights",
+        "Drone Shoots"
+      ],
+      "price": "Contact for Pricing",
+      "image": "assets/images/wedding-photo-5.webp"
+    },
+    {
+      "id": "pre-wedding",
+      "badge": "PRE-WEDDING",
+      "title": "Pre-Wedding Shoots",
+      "shortSummary": "Romantic and conceptual pre-wedding photography.",
+      "fullDescription": "Celebrate your love story before the big day. We offer beautifully directed pre-wedding shoots at exotic locations with cinematic styling.",
+      "features": [
+        "Concept Shoots",
+        "Location Scouting",
+        "Save The Date Videos"
+      ],
+      "price": "Contact for Pricing",
+      "image": "assets/images/wedding-photo-10.webp"
+    },
+    {
+      "id": "drone-shoot",
+      "badge": "AERIAL",
+      "title": "Drone Shoots",
+      "shortSummary": "Breathtaking aerial views of your grand venues.",
+      "fullDescription": "Get a bird's-eye view of your wedding venue and grand entries with our 4K drone cinematography.",
+      "features": [
+        "4K Aerial Video",
+        "Venue Panoramas",
+        "Grand Entry Coverage"
+      ],
+      "price": "Contact for Pricing",
+      "image": "assets/images/wedding-photo-7.webp"
+    },
+    {
+      "id": "candid",
+      "badge": "CANDID",
+      "title": "Candid Photography",
+      "shortSummary": "Unscripted, natural moments that tell your true story.",
+      "fullDescription": "We specialize in capturing the raw, unscripted emotions of your special day, creating a timeline of candid memories.",
+      "features": [
+        "Unposed Moments",
+        "Emotional Coverage",
+        "Documentary Style"
+      ],
+      "price": "Contact for Pricing",
+      "image": "assets/images/wedding-photo-8.webp"
+    },
+    {
+      "id": "albums",
+      "badge": "LUXURY",
+      "title": "Premium Albums",
+      "shortSummary": "Handcrafted, luxury photo albums designed to last.",
+      "fullDescription": "Preserve your memories in our premium, handcrafted coffee-table albums made with high-quality archival paper.",
+      "features": [
+        "Custom Layouts",
+        "Matte/Gloss Finish",
+        "Leather Covers"
+      ],
+      "price": "Contact for Pricing",
+      "image": "assets/images/wedding-photo-15.webp"
+    }
+  ],
+  "packages": [
+    {
+      "name": "Silver",
+      "price": "₹15,000",
+      "features": [
+        "1 Traditional Photographer",
+        "Soft Copy Delivery",
+        "1 Standard Album",
+        "Basic Editing"
+      ],
+      "featured": false
+    },
+    {
+      "name": "Gold",
+      "price": "₹35,000",
+      "badge": "Most Popular",
+      "features": [
+        "1 Candid Photographer",
+        "1 Cinematic Videographer",
+        "Drone Shoot",
+        "Premium 40-sheet Album"
+      ],
+      "featured": true
+    },
+    {
+      "name": "Platinum",
+      "price": "₹65,000",
+      "features": [
+        "Complete Team Coverage",
+        "4K Cinematic Film",
+        "Pre-Wedding Shoot",
+        "2 Luxury Albums"
+      ],
+      "featured": false
+    }
+  ],
+  "whyChooseUs": [
+    {
+      "title": "Expert Photographers",
+      "description": "Highly experienced in candid and traditional photography.",
+      "image": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "title": "High-End Gear",
+      "description": "We shoot on industry-leading Sony & Canon 4K cameras.",
+      "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "title": "Cinematic Editing",
+      "description": "Premium color grading and cinematic video editing.",
+      "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "title": "Destination Weddings",
+      "description": "Available to travel pan-India for your grand destination wedding.",
+      "image": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Rachna Kharanga",
+      "text": "It's been an amazing experience! The team at RR Studio has a unique creative vision and they are incredibly experienced professionals. They have an exceptional understanding of lighting and angles, capturing the best moments for every couple.",
+      "stars": 5,
+      "source": "Google Review",
+      "meta": "4 reviews · 2 photos"
+    },
+    {
+      "name": "Puja Sinha",
+      "text": "Highly recommended.. Always have a great experience. We hired them for our wedding and also for a family portrait session. Best ever services and a very cooperative team..",
+      "stars": 5,
+      "source": "Google Review",
+      "meta": "3 reviews"
+    },
+    {
+      "name": "Sadhna Kumari",
+      "text": "I had a pre-wedding shoot done one year ago. They did a stunning job with our photos. Best photography in Ghatshila. The photographers are very professional and make you feel comfortable in front of the camera.",
+      "stars": 5,
+      "source": "Google Review",
+      "meta": "3 reviews"
+    },
+    {
+      "name": "Jiya Sen",
+      "text": "Services are excellent. I booked them for my wedding photography and cinematic videography, and my experience was absolutely wonderful.",
+      "stars": 5,
+      "source": "Google Review",
+      "meta": "1 review"
+    },
+    {
+      "name": "Kabhi Banerjee",
+      "text": "Very nice photography in Ghatsila.. all types of photography services like cinematic videography, candid shoots, and traditional wedding photography are available at a very reasonable price.",
+      "stars": 4,
+      "source": "Google Review",
+      "meta": "Local Guide · 19 reviews"
+    },
+    {
+      "name": "Soumili Dutta",
+      "text": "Outstanding wedding photographers. Highly recommended for capturing your special bridal moments and grand celebrations!",
+      "stars": 5,
+      "source": "Google Review",
+      "meta": "1 review"
+    },
+    {
+      "name": "Riya Deepa",
+      "text": "My first experience was awesome! The wedding photography was really incredible. Not just the couple, but all the guests loved the candid shots and the cinematic wedding film. Thank you so much!",
+      "stars": 5,
+      "source": "Google Review",
+      "meta": "6 reviews · 2 photos"
+    },
+    {
+      "name": "Payal Singh",
+      "text": "My wedding photography came out beautifully, and everyone was amazed by the cinematic teaser video! The team is also so friendly and easy to work with. Thank you so much!",
+      "stars": 5,
+      "source": "Google Review",
+      "meta": "2 reviews"
+    }
+  ],
+  "gallery": [
+    {
+      "image": "assets/videos/reel1.mp4",
+      "type": "video",
+      "alt": "Instagram Reel - Cinematic Wedding",
+      "category": "cinematography",
+      "size": "large",
+      "rotate": "-90deg"
+    },
+    {
+      "image": "assets/videos/reel2.mp4",
+      "type": "video",
+      "alt": "Instagram Reel - Pre-Wedding Shoot",
+      "category": "cinematography",
+      "size": "large",
+      "rotate": "-90deg"
+    },
+    {
+      "image": "assets/images/wedding-photo-2.webp",
+      "alt": "Wedding Shoot",
+      "category": "pre-wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-5.webp",
+      "alt": "Wedding Shoot",
+      "category": "pre-wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-7.webp",
+      "alt": "Wedding Shoot",
+      "category": "wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-8.webp",
+      "alt": "Wedding Shoot",
+      "category": "pre-wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-16.webp",
+      "alt": "Wedding Shoot",
+      "category": "candid",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-10.webp",
+      "alt": "Wedding Shoot",
+      "category": "wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-11.webp",
+      "alt": "Wedding Shoot",
+      "category": "pre-wedding",
+      "size": "large"
+    },
+    {
+      "image": "assets/images/wedding-photo-12.webp",
+      "alt": "Wedding Shoot",
+      "category": "candid",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-13.webp",
+      "alt": "Wedding Shoot",
+      "category": "wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-14.webp",
+      "alt": "Wedding Shoot",
+      "category": "pre-wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-15.webp",
+      "alt": "Wedding Shoot",
+      "category": "candid",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-9.webp",
+      "alt": "Wedding Shoot",
+      "category": "wedding",
+      "size": "large"
+    },
+    {
+      "image": "assets/images/wedding-photo-17.webp",
+      "alt": "Wedding Shoot",
+      "category": "pre-wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-18.webp",
+      "alt": "Wedding Shoot",
+      "category": "candid",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-19.webp",
+      "alt": "Wedding Shoot",
+      "category": "wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-20.webp",
+      "alt": "Wedding Shoot",
+      "category": "pre-wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-21.webp",
+      "alt": "Wedding Shoot",
+      "category": "candid",
+      "size": "large"
+    },
+    {
+      "image": "assets/images/wedding-photo-22.webp",
+      "alt": "Wedding Shoot",
+      "category": "wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-23.webp",
+      "alt": "Wedding Shoot",
+      "category": "pre-wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-24.webp",
+      "alt": "Wedding Shoot",
+      "category": "candid",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-25.webp",
+      "alt": "Wedding Shoot",
+      "category": "wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-26.webp",
+      "alt": "Wedding Shoot",
+      "category": "pre-wedding",
+      "size": "large"
+    },
+    {
+      "image": "assets/images/wedding-photo-27.webp",
+      "alt": "Wedding Shoot",
+      "category": "candid",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-28.webp",
+      "alt": "Wedding Shoot",
+      "category": "wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-29.webp",
+      "alt": "Wedding Shoot",
+      "category": "pre-wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-30.webp",
+      "alt": "Wedding Shoot",
+      "category": "candid",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-31.webp",
+      "alt": "Wedding Shoot",
+      "category": "wedding",
+      "size": "large"
+    },
+    {
+      "image": "assets/images/wedding-photo-32.webp",
+      "alt": "Wedding Shoot",
+      "category": "pre-wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-33.webp",
+      "alt": "Wedding Shoot",
+      "category": "candid",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-34.webp",
+      "alt": "Wedding Shoot",
+      "category": "wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-35.webp",
+      "alt": "Wedding Shoot",
+      "category": "pre-wedding",
+      "size": "normal"
+    },
+    {
+      "image": "assets/images/wedding-photo-36.webp",
+      "alt": "Wedding Shoot",
+      "category": "candid",
+      "size": "large"
+    },
+    {
+      "image": "assets/images/wedding-photo-37.webp",
+      "alt": "Wedding Shoot",
+      "category": "wedding",
+      "size": "normal"
+    }
+  ],
+  "about": {
+    "image": "assets/images/wedding-photo-35.webp",
+    "story": {
+      "title": "Capturing Beautiful<br>Moments Since 2015",
+      "text": "Welcome to RR Studio, your premier destination for luxury wedding photography and cinematography in Ghatsila & Jamshedpur. We specialize in capturing candid emotions, epic drone shots, and crafting cinematic wedding films."
+    },
+    "features": [
+      "16+ Years Experience",
+      "Certified Wedding Photographers",
+      "High-End Cinema Cameras",
+      "Home & Destination Services"
+    ],
+    "stats": [
+      {
+        "number": "16",
+        "label": "Years Experience"
+      },
+      {
+        "number": "500",
+        "label": "Happy Clients"
+      },
+      {
+        "number": "1000",
+        "label": "Wedding Shoots"
+      }
+    ],
+    "founder": {
+      "name": "RR Studio",
+      "role": "Founder & Lead Photographer",
+      "image": "assets/images/logo.png",
+      "bio": "With 16 years of experience in the wedding photography industry, RR Studio has captured countless weddings. Our passion for perfection and continuous learning ensures that every client receives a cinematic masterpiece."
+    },
+    "team": {
+      "title": "Our Talented Team",
+      "image": "assets/images/logo.png",
+      "text": "Meet the dedicated professionals who bring the RR Studio vision to life. Our team consists of highly trained candid photographers, traditional shooters, cinematographers, and drone pilots who are passionate about their craft. With years of collective experience, we work together to ensure that every wedding receives personalized attention and flawless coverage."
+    },
+    "mission": "To provide exceptional photography services that preserve your most precious moments. We strive to create a cinematic and stress-free shooting experience where every detail is captured.",
+    "vision": "To be the leading luxury wedding studio in the region, constantly innovating and setting new standards in the wedding industry through continuous education and passion.",
+    "anniversary": {
+      "title": "15 Years of Excellence",
+      "image": "assets/images/logo.png",
+      "text": "What started as a dream has now blossomed into a legacy. We recently celebrated our 15th anniversary and inaugurated our newly upgraded editing studio to provide an even more luxurious experience for our beloved clients."
+    }
+  },
+  "appointment": {
+    "image": "assets/images/wedding-photo-17.webp",
+    "services": [
+      "Wedding Photography",
+      "Pre-Wedding",
+      "Cinematography",
+      "Candid Shoots",
+      "Drone Coverage"
+    ]
+  },
+  "cta": {
+    "kicker": "✦ BOOK YOUR SESSION ✦",
+    "title": "Ready To Frame <span class=\"gold-text\">Your Story?</span>",
+    "description": "Book your dates today and let our team capture your perfect wedding memories."
+  }
+}

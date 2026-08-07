@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | RR Studio</title>
+    <meta name="description" content="Detailed Premium Photography Services including Wedding Photography, Cinematography, Drone Photography, and more at RR Studio.">
+    <meta name="theme-color" content="#b57a84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../assets/css/global.css?v=12">
+    <link rel="stylesheet" href="../assets/css/services-page.css">
+    
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+</head>
+
+<body data-theme="light">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-ring"></div>
+        <div class="loader-text">RR Studio</div>
+    </div>
+    <script>
+        (function(){
+            var pl = document.getElementById('preloader');
+            if(!pl) return;
+            var hide = function(){
+                pl.classList.add('loaded');
+                setTimeout(function(){ pl.remove(); }, 850);
+            };
+            if(document.readyState === 'complete') { hide(); }
+            else { 
+                window.addEventListener('load', hide); 
+                setTimeout(hide, 3000); // 3s fallback
+            }
+        })();
+    </script>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!--==================== NAVBAR ====================-->
+    <header class="header">
+        <nav class="navbar" aria-label="Primary navigation">
+            <a href="../index.html" class="logo" style="display: flex; flex-direction: row; align-items: center; gap: 12px; text-decoration: none; white-space: nowrap;">
+                <img src="../assets/images/logo.png" alt="RR Studio Logo" style="height: 45px; width: auto; object-fit: contain;">
+                <div style="display: flex; flex-direction: column; justify-content: center; text-align: left;">
+                    <span class="brand-name" style="font-size: 1.25rem; font-weight: 800; line-height: 1.1; letter-spacing: 1px; font-family: 'Playfair Display', serif;">RR Studio</span>
+                    <span style="font-size: 0.7rem; font-weight: 600; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; font-family: 'Poppins', sans-serif;">Photography</span>
+                </div>
+            </a>
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link active">Services</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="../index.html#packages" class="nav-link">Packages</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="../index.html#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li class="mobile-theme-toggle">
+                    <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
+                        <span class="theme-toggle-icon" aria-hidden="true">&#9790;</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <a href="../index.html#contact" class="book-btn">Book Appointment</a>
+            </div>
+            <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu">&#9776;</button>
+        </nav>
+    </header>
+
+    <!-- Page Hero (Rendered by JS) -->
+    <section class="page-hero" id="page-hero"></section>
+
+    <!--==================== SERVICES DETAILS (Rendered by JS) ====================-->
+    <div id="services-page-content"></div>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <a href="../index.html" class="footer-logo" aria-label="RR Studio home">
+                    <img src="../assets/images/logo.png" alt="RR Studio Logo" style="max-height: 40px; width: auto; object-fit: contain;">
+                </a>
+                <p>Luxury Wedding Photography and cinematic drone shoots, crafted for your most memorable moments.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/rrstudio_rr6" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="https://youtube.com/@rrstudiorr6" target="_blank" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="../index.html#packages">Packages</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Signature Services</h3>
+                <ul>
+                    <li><a href="services.html#wedding-photography">Wedding Photography</a></li>
+                    <li><a href="services.html#cinematography">Cinematography</a></li>
+                    <li><a href="services.html#pre-wedding">Pre-Wedding Shoots</a></li>
+                    <li><a href="services.html#drone-shoot">Drone Photography</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Visit &amp; Contact</h3>
+                <ul style="display: flex; flex-direction: column; gap: 15px;">
+                    <li style="display: flex; gap: 10px; align-items: flex-start;"><i data-lucide="map-pin" style="width: 18px; height: 18px; color: var(--gold); margin-top: 4px;"></i> Ghatsila, East Singhbhum, Jharkhand</li>
+                    <li style="display: flex; gap: 10px; align-items: center;"><i data-lucide="phone" style="width: 18px; height: 18px; color: var(--gold);"></i> <a href="tel:+918797655726">+91 8797655726</a></li>
+                    <li style="display: flex; gap: 10px; align-items: center;"><i data-lucide="mail" style="width: 18px; height: 18px; color: var(--gold);"></i> <a href="mailto:rajkumarbhunia2004@gmail.com">rajkumarbhunia2004@gmail.com</a></li>
+                    <li style="display: flex; gap: 10px; align-items: center;"><i data-lucide="clock" style="width: 18px; height: 18px; color: var(--gold);"></i> Open daily, 9:00 AM - 8:00 PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <span>Copyright 2026 RR Studio. All rights reserved.</span>
+            <span class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms</a><span>Designed and developed by codecraftdigital</span></span>
+        </div>
+    </footer>
+
+
+    
+    <!-- Floating Actions -->
+    <a href="https://wa.me/918797655726?text=Hello%20I%20want%20to%20book%20an%20appointment" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="#FFFFFF"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    </a>
+    <a href="tel:+918797655726" class="floating-call" aria-label="Call RR Studio"><i data-lucide="phone-call" aria-hidden="true"></i></a>
+    <button type="button" class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+    <script type="module" src="../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* ==============================
+   HERO
+   ============================== */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: #111;
+}
+
+/* ---------- Slider ---------- */
+.hero-slider {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 0;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: opacity 2s ease-in-out, transform 5s ease-out;
+    will-change: transform, opacity;
+}
+
+/* First slide visible by default */
+.hero-slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hero-slide.slide-1 { background-image: url("../images/wedding-photo-2.webp"); }
+.hero-slide.slide-2 { background-image: url("../images/wedding-photo-18.webp"); }
+.hero-slide.slide-3 { background-image: url("../images/wedding-photo-25.webp"); }
+.hero-slide.slide-4 { background-image: url("../images/wedding-photo-35.webp"); }
+.hero-slide.slide-5 { background-image: url("../images/wedding-photo-7.webp"); }
+
+/* ---------- Single charcoal overlay ---------- */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+    background: linear-gradient(
+        180deg,
+        rgba(18, 18, 18, 0.50) 0%,
+        rgba(18, 18, 18, 0.35) 40%,
+        rgba(18, 18, 18, 0.35) 60%,
+        rgba(18, 18, 18, 0.60) 100%
+    );
+}
+
+.hero-overlay {
+    display: none; /* Not needed — single overlay via ::before */
+}
+
+/* ---------- Content ---------- */
+.hero-container {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    color: white;
+    padding: 0 20px;
+    text-shadow: 0 12px 34px rgba(0,0,0,.35);
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 1.5px solid rgba(214, 179, 106, 0.5);
+    border-radius: 40px;
+    background: rgba(214, 179, 106, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    margin-bottom: 26px;
+    color: var(--gold);
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 0 0 12px rgba(214, 179, 106, 0.6);
+    box-shadow: 0 0 18px rgba(214, 179, 106, 0.25), inset 0 0 12px rgba(214, 179, 106, 0.08);
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 82px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.6), 0 0 40px rgba(0,0,0,0.3);
+    animation: zoomOutEntry 2.5s cubic-bezier(0.2, 0.8, 0.2, 1) 0.1s both;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #f4f4f4;
+    line-height: 1.8;
+    margin-bottom: 45px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 4;
+}
+.scroll-indicator span {
+    width: 2px; height: 34px;
+    background: white;
+    animation: scroll 1.5s infinite;
+    will-change: transform;
+}
+
+@keyframes scroll {
+    0%   { transform: scaleY(0); transform-origin: top; }
+    50%  { transform: scaleY(1); transform-origin: top; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+}

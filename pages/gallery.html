@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | RR Studio</title>
+    <meta name="description" content="View our portfolio of Wedding Photography, cinematography, and pre-wedding shoots at RR Studio.">
+    <meta name="theme-color" content="#b57a84">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    
+    <link rel="stylesheet" href="../assets/css/global.css?v=12">
+    <style>
+        /* Masonry Grid */
+        .masonry-gallery {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            column-count: 3;
+            column-gap: 20px;
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+        .masonry-item.video-item {
+            max-height: 350px;
+        }
+        .masonry-item img,
+        .masonry-item video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 12px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .masonry-item:hover img,
+        .masonry-item:hover video {
+            transform: scale(1.05);
+        }
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 8px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .filter-btn:hover {
+            background: var(--gold);
+            color: #000;
+        }
+        .filter-btn.active {
+            background: rgba(220, 165, 87, 0.15); /* Very slight tint */
+            color: #000; /* Dark text for light mode */
+            border: 2px solid var(--gold);
+            font-weight: 600;
+            /* Softer glow for light mode */
+            box-shadow: 0 0 12px rgba(220, 165, 87, 0.5), inset 0 0 8px rgba(220, 165, 87, 0.2);
+        }
+        body[data-theme="dark"] .filter-btn.active {
+            color: #fff; /* White text stands out in dark mode */
+            /* Stronger neon glow for dark mode */
+            box-shadow: 0 0 20px var(--gold), inset 0 0 15px var(--gold);
+            text-shadow: 0 0 8px var(--gold);
+        }
+        @media (max-width: 900px) {
+            .masonry-gallery { column-count: 2; }
+        }
+        @media (max-width: 768px) {
+            .masonry-gallery { 
+                column-count: auto;
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                gap: 16px;
+                padding-bottom: 20px;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+                -webkit-overflow-scrolling: touch;
+                
+                /* Edge-to-edge scroll */
+                width: 100vw;
+                max-width: 100vw;
+                margin-left: calc(-50vw + 50%);
+                margin-right: calc(-50vw + 50%);
+                padding-left: 22px;
+                padding-right: 22px;
+            }
+            .masonry-gallery::-webkit-scrollbar { display: none; }
+            .masonry-item {
+                flex: 0 0 85%;
+                scroll-snap-align: center;
+                margin-bottom: 0;
+            }
+            
+            /* Filter tabs horizontal scroll */
+            .gallery-filters {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                justify-content: flex-start;
+                padding: 0 22px 10px;
+                margin: 20px 0;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+                -webkit-overflow-scrolling: touch;
+            }
+            .gallery-filters::-webkit-scrollbar { display: none; }
+            .filter-btn {
+                white-space: nowrap;
+                flex: 0 0 auto;
+                padding: 6px 18px;
+                font-size: 13.5px;
+            }
+        }
+    </style>
+    
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+</head>
+
+<body data-theme="light">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-ring"></div>
+        <div class="loader-text">RR Studio</div>
+    </div>
+    <script>
+        (function(){
+            var pl = document.getElementById('preloader');
+            if(!pl) return;
+            var hide = function(){
+                pl.classList.add('loaded');
+                setTimeout(function(){ pl.remove(); }, 850);
+            };
+            if(document.readyState === 'complete') { hide(); }
+            else { 
+                window.addEventListener('load', hide); 
+                setTimeout(hide, 3000); // 3s fallback
+            }
+        })();
+    </script>
+    <!-- Navbar -->
+    <header class="header">
+        <nav class="navbar" aria-label="Primary navigation">
+            <a href="../index.html" class="logo" style="display: flex; flex-direction: row; align-items: center; gap: 12px; text-decoration: none; white-space: nowrap;">
+                <img src="../assets/images/logo.png" alt="RR Studio Logo" style="height: 45px; width: auto; object-fit: contain;">
+                <div style="display: flex; flex-direction: column; justify-content: center; text-align: left;">
+                    <span class="brand-name" style="font-size: 1.25rem; font-weight: 800; line-height: 1.1; letter-spacing: 1px; font-family: 'Playfair Display', serif;">RR Studio</span>
+                    <span style="font-size: 0.7rem; font-weight: 600; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; font-family: 'Poppins', sans-serif;">Photography</span>
+                </div>
+            </a>
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="../index.html#packages" class="nav-link">Packages</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="../index.html#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li class="mobile-theme-toggle">
+                    <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true">
+                        <span class="theme-toggle-icon" aria-hidden="true">&#9790;</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <a href="../index.html#contact" class="book-btn">Book Appointment</a>
+            </div>
+            <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu">&#9776;</button>
+        </nav>
+    </header>
+
+    <!-- Page Hero (Rendered by JS) -->
+    <section class="page-hero" id="page-hero"></section>
+
+    <!-- Gallery Content (Rendered by JS) -->
+    <div id="gallery-page-content"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <a href="../index.html" class="footer-logo" aria-label="RR Studio home">
+                    <img src="../assets/images/logo.png" alt="RR Studio Logo" style="max-height: 40px; width: auto; object-fit: contain;">
+                </a>
+                <p>Luxury Wedding Photography and cinematic drone shoots, crafted for your most memorable moments.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/rrstudio_rr6" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="https://youtube.com/@rrstudiorr6" target="_blank" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="../index.html#packages">Packages</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Signature Services</h3>
+                <ul>
+                    <li><a href="services.html#wedding-photography">Wedding Photography</a></li>
+                    <li><a href="services.html#cinematography">Cinematography</a></li>
+                    <li><a href="services.html#pre-wedding">Pre-Wedding Shoots</a></li>
+                    <li><a href="services.html#drone-shoot">Drone Photography</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Visit &amp; Contact</h3>
+                <ul style="display: flex; flex-direction: column; gap: 15px;">
+                    <li style="display: flex; gap: 10px; align-items: flex-start;"><i data-lucide="map-pin" style="width: 18px; height: 18px; color: var(--gold); margin-top: 4px;"></i> Ghatsila, East Singhbhum, Jharkhand</li>
+                    <li style="display: flex; gap: 10px; align-items: center;"><i data-lucide="phone" style="width: 18px; height: 18px; color: var(--gold);"></i> <a href="tel:+918797655726">+91 8797655726</a></li>
+                    <li style="display: flex; gap: 10px; align-items: center;"><i data-lucide="mail" style="width: 18px; height: 18px; color: var(--gold);"></i> <a href="mailto:rajkumarbhunia2004@gmail.com">rajkumarbhunia2004@gmail.com</a></li>
+                    <li style="display: flex; gap: 10px; align-items: center;"><i data-lucide="clock" style="width: 18px; height: 18px; color: var(--gold);"></i> Open daily, 9:00 AM - 8:00 PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <span>Copyright 2026 RR Studio. All rights reserved.</span>
+            <span class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms</a><span>Designed and developed by codecraftdigital</span></span>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Floating Actions -->
+    <a href="https://wa.me/918797655726?text=Hello%20I%20want%20to%20book%20an%20appointment" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="#FFFFFF"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+    </a>
+    <a href="tel:+918797655726" class="floating-call" aria-label="Call RR Studio"><i data-lucide="phone-call" aria-hidden="true"></i></a>
+    <button type="button" class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script type="module" src="../assets/js/main.js" defer></script>
+</body>
+</html>

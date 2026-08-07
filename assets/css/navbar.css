@@ -1,0 +1,182 @@
+/* ==============================
+   NAVBAR
+   ============================== */
+.header {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar {
+    width: 100%;
+    height: 90px;
+    padding: 0 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,.12);
+    backdrop-filter: blur(20px);
+    transition: var(--transition);
+    max-width: none;
+    border-bottom: 1px solid rgba(255,255,255,.16);
+}
+
+.header.scrolled .navbar {
+    background: rgba(21,21,21,.92);
+    box-shadow: 0 12px 35px rgba(0,0,0,.14);
+}
+
+.logo { display: flex; flex-direction: column; }
+
+.logo-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.logo-sub {
+    color: white;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.nav-menu { display: flex; gap: 38px; }
+
+.nav-menu a {
+    color: white;
+    font-weight: 500;
+    position: relative;
+    transition: .3s;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    width: 0; height: 2px;
+    left: 0; bottom: -8px;
+    background: var(--gold);
+    transition: .3s;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after { width: 100%; }
+
+.nav-menu a:hover,
+.nav-menu a.active,
+.nav-menu a.active:hover { color: var(--gold); }
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds space between the buttons */
+    margin-left: 20px; /* Pushes them slightly right if needed */
+}
+
+.book-btn {
+    padding: 14px 30px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, var(--primary), #e68d9c);
+    color: white;
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+    box-shadow: 0 8px 18px rgba(183,110,121,.35), inset 0 2px 0 rgba(255,255,255,0.2);
+}
+.book-btn:hover { 
+    transform: translateY(-3px) scale(1.02); 
+    box-shadow: 0 12px 24px rgba(183,110,121,.5), inset 0 2px 0 rgba(255,255,255,0.2);
+    background: linear-gradient(135deg, #e68d9c, var(--primary)); 
+}
+
+.menu-btn {
+    display: none;
+    color: white;
+    font-size: 34px;
+    cursor: pointer;
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.12);
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+/* Theme toggle */
+.theme-toggle {
+    width: 40px; height: 40px;
+    display: inline-grid;
+    place-items: center;
+    flex: 0 0 auto;
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 50%;
+    background: rgba(255,255,255,.08);
+    color: #fff;
+    cursor: pointer;
+    transition: transform .25s ease, background-color .25s ease, border-color .25s ease;
+}
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    border-color: rgba(214,179,106,.72);
+    background: rgba(214,179,106,.15);
+}
+.theme-toggle:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.theme-toggle-icon { font-size: 19px; line-height: 1; }
+
+/* Floating buttons */
+.floating-whatsapp,
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    z-index: 1100;
+    display: grid;
+    place-items: center;
+    width: 54px; height: 54px;
+    border-radius: 50%;
+    color: white;
+    box-shadow: 0 18px 40px rgba(0,0,0,.18);
+    transition: var(--transition);
+    cursor: pointer;
+}
+.floating-whatsapp { bottom: 96px; background: #25d366; font-weight: 700; }
+.back-to-top { bottom: 28px; background: var(--primary); opacity: 0; visibility: hidden; }
+.back-to-top.show { opacity: 1; visibility: visible; }
+.floating-whatsapp:hover, .back-to-top:hover { transform: translateY(-5px); }
+
+.floating-call {
+    position: fixed;
+    right: 24px; bottom: 164px;
+    z-index: 1100;
+    width: 56px; height: 56px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 50%;
+    background: #d6b36a;
+    color: #28201a;
+    box-shadow: 0 18px 40px rgba(0,0,0,.18);
+    font-size: 20px;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.floating-call:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 42px rgba(0,0,0,.28), 0 0 20px rgba(214,179,106,.20);
+}
+.floating-call svg { width: 21px; height: 21px; }
+
+/* Scroll progress bar */
+.scroll-progress {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 4px;
+    z-index: 1200;
+    background: linear-gradient(90deg, var(--primary), var(--gold));
+    transform: scaleX(0);
+    transform-origin: left;
+    will-change: transform;
+}

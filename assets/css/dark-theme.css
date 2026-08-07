@@ -1,0 +1,181 @@
+/* ==============================
+   DARK GLASS THEME
+   ============================== */
+body[data-theme="dark"] {
+    --white: #171719;
+    --black: #f7f3f0;
+    --gray: #b7afb0;
+    --light: #101011;
+    --shadow: 0 24px 60px rgba(0,0,0,.30);
+    background: #101011;
+    color: #f7f3f0;
+}
+
+body[data-theme="dark"]::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 10% 12%, rgba(183,110,121,.13), transparent 30%),
+        radial-gradient(circle at 88% 48%, rgba(214,179,106,.075), transparent 27%);
+}
+
+body[data-theme="dark"] .header .navbar {
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    background: rgba(15,15,17,.68);
+    box-shadow: 0 12px 34px rgba(0,0,0,.18);
+}
+body[data-theme="dark"] .header.scrolled .navbar {
+    background: rgba(12,12,14,.88);
+    box-shadow: 0 16px 40px rgba(0,0,0,.34);
+}
+
+body[data-theme="dark"] .services,
+body[data-theme="dark"] .about,
+body[data-theme="dark"] .gallery,
+body[data-theme="dark"] .packages,
+body[data-theme="dark"] .why-us,
+body[data-theme="dark"] .testimonials,
+body[data-theme="dark"] .appointment,
+body[data-theme="dark"] .instagram { background: transparent; }
+
+body[data-theme="dark"] .services,
+body[data-theme="dark"] .packages,
+body[data-theme="dark"] .testimonials,
+body[data-theme="dark"] .instagram { background: rgba(255,255,255,.018); }
+
+body[data-theme="dark"] .section-title h2,
+body[data-theme="dark"] .about-right h2,
+body[data-theme="dark"] .appointment-left h2,
+body[data-theme="dark"] .why-card h3,
+body[data-theme="dark"] .service-card h3,
+body[data-theme="dark"] .package-card h3,
+body[data-theme="dark"] .testimonial-card h3 { color: #f7f3f0; }
+
+body[data-theme="dark"] .section-title p,
+body[data-theme="dark"] .about-right p,
+body[data-theme="dark"] .appointment-left p,
+body[data-theme="dark"] .service-card p,
+body[data-theme="dark"] .why-card p,
+body[data-theme="dark"] .testimonial-card p,
+body[data-theme="dark"] .stat-box p { color: #b7afb0; }
+
+body[data-theme="dark"] .package-card:not(.featured) li { 
+    color: #f7f3f0; 
+    border-color: rgba(255,255,255,0.1); 
+}
+body[data-theme="dark"] .package-card.featured li { 
+    color: #ffffff; 
+    border-color: rgba(255,255,255,0.25); 
+}
+
+body[data-theme="dark"] .service-card,
+body[data-theme="dark"] .package-card:not(.featured),
+body[data-theme="dark"] .why-card,
+body[data-theme="dark"] .testimonial-card,
+body[data-theme="dark"] .stat-box,
+body[data-theme="dark"] .feature,
+body[data-theme="dark"] .appointment-right {
+    border: 1px solid rgba(255,255,255,.11);
+    background: linear-gradient(145deg, rgba(255,255,255,.105), rgba(255,255,255,.035));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 18px 48px rgba(0,0,0,.22);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+body[data-theme="dark"] .service-card:hover,
+body[data-theme="dark"] .package-card:not(.featured):hover,
+body[data-theme="dark"] .why-card:hover,
+body[data-theme="dark"] .testimonial-card:hover,
+body[data-theme="dark"] .stat-box:hover {
+    border-color: rgba(214,179,106,.42);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.13), 0 22px 52px rgba(0,0,0,.34),
+        0 0 0 1px rgba(183,110,121,.10), 0 0 28px rgba(183,110,121,.12);
+}
+
+body[data-theme="dark"] .review-source {
+    background: rgba(255,255,255,.05);
+    border-color: rgba(255,255,255,.1);
+    color: #e8e4e0;
+}
+
+body[data-theme="dark"] .service-card {
+    background: linear-gradient(145deg, rgba(255,255,255,.095), rgba(183,110,121,.045));
+}
+body[data-theme="dark"] .service-badge {
+    background: rgba(214,179,106,.1);
+    color: #e5c981;
+    border-color: rgba(214,179,106,.2);
+}
+body[data-theme="dark"] .service-price { color: #e5c981; }
+body[data-theme="dark"] .service-image-overlay {
+    background: linear-gradient(to top, rgba(16,16,17,.9) 0%, transparent 50%);
+}
+
+body[data-theme="dark"] .feature,
+body[data-theme="dark"] .appointment-left ul li { color: #eee8e5; }
+body[data-theme="dark"] .stat-box h3,
+body[data-theme="dark"] .package-card h1 { color: #e5c981; }
+body[data-theme="dark"] .package-card li { border-bottom-color: rgba(255,255,255,.09); }
+
+body[data-theme="dark"] .why-img {
+    border-color: #1a1a1c;
+    background: #1a1a1c;
+}
+
+body[data-theme="dark"] .contact-details { background: rgba(255,255,255,.018); }
+body[data-theme="dark"] .contact-card,
+body[data-theme="dark"] .map-frame,
+body[data-theme="dark"] .social-card {
+    border-color: rgba(255,255,255,.11);
+    background: linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.025));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 18px 46px rgba(0,0,0,.24);
+}
+body[data-theme="dark"] .contact-card h3,
+body[data-theme="dark"] .social-section-heading h3,
+body[data-theme="dark"] .social-card strong,
+body[data-theme="dark"] .contact-list strong { color: #f7f3f0; }
+body[data-theme="dark"] .contact-list li {
+    border-color: rgba(255,255,255,.08);
+    background: rgba(0,0,0,.15);
+}
+body[data-theme="dark"] .contact-list a,
+body[data-theme="dark"] .contact-list div > span,
+body[data-theme="dark"] .social-card small { color: #b7afb0; }
+body[data-theme="dark"] .social-card:hover {
+    border-color: rgba(214,179,106,.45);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.11), 0 18px 36px rgba(0,0,0,.35),
+        0 0 22px rgba(183,110,121,.10);
+}
+
+body[data-theme="dark"] .appointment-right input,
+body[data-theme="dark"] .appointment-right select,
+body[data-theme="dark"] .appointment-right textarea {
+    background-color: rgba(255,255,255,.07);
+    border-color: rgba(255,255,255,.12);
+    color: #f7f3f0;
+}
+body[data-theme="dark"] .appointment-right input::placeholder,
+body[data-theme="dark"] .appointment-right textarea::placeholder {
+    color: #807878;
+}
+body[data-theme="dark"] .appointment-right select {
+    color: #f7f3f0;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f7f3f0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+body[data-theme="dark"] .appointment-right select option {
+    background: #1a1a1c;
+    color: #f7f3f0;
+}
+body[data-theme="dark"] .appointment-right input[type="date"] {
+    color-scheme: dark;
+    position: relative;
+}
+body[data-theme="dark"] .appointment-right input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1) brightness(2);
+    cursor: pointer;
+    opacity: 1;
+    font-size: 20px;
+    padding: 4px;
+}

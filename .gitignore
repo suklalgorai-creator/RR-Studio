@@ -1,0 +1,9 @@
+# Zip files
+*.zip
+
+# Temp/script files
+replace_logo.js
+node_modules/
+.DS_Store
+Thumbs.db
+*.bak

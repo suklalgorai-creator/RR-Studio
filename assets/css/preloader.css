@@ -1,0 +1,51 @@
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #100b0c; /* Deep luxury dark */
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+}
+
+#preloader.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Elegant ring animation */
+.loader-ring {
+    width: 70px;
+    height: 70px;
+    border: 2px solid rgba(214, 179, 106, 0.15); /* Faded gold */
+    border-top: 2px solid var(--gold); /* Bright gold */
+    border-radius: 50%;
+    animation: spin 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+    margin-bottom: 24px;
+}
+
+.loader-text {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 90%;
+    line-height: 1.6;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
